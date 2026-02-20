@@ -53,7 +53,7 @@ export function deposit(amount, currency) {
     const data = await response.json();
     const convertedAmount = Number((amount * data.rates.USD).toFixed(2));
 
-    dispatch({ type: "account/desposit", payload: convertedAmount });
+    dispatch({ type: "account/deposit", payload: convertedAmount });
   };
 }
 
